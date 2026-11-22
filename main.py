@@ -455,7 +455,7 @@ def main():
     draw_text(692, 284, "GULF WAR • BAHRAIN", 2, RED, True)
     para(692, 304, "IRAN CLAIMS STRIKES ON US RADARS IN BAHRAIN",
          3, INK, 292, 2, True)
-    para(692, 410, "MISSILES + DRONES HIT PATRIOT SITES AT AL-RIFFA AND AWALI",
+    para(692, 410, "MISSILES + DRONES HIT THE PATRIOT RADARS",
          2, GREY, 292, 2)
 
     # ---- middle row
