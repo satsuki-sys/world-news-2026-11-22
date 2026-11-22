@@ -8,6 +8,9 @@ drawing helpers, its own PNG encoder -- and writes the result to
 read, no randomness except a fixed-seed generator, so two runs write the
 same bytes.
 
+Revised after the first render: the Gulf sub was shortened to fit its card,
+and the roadblock was seated on the road instead of floating at its edge.
+
 The day it sums up, as reported on 22 November 2026:
   * The G20 summit opens in Johannesburg, the first ever held in Africa;
     the United States boycotts it and a leaders' declaration is adopted.
@@ -321,10 +324,11 @@ def scene_cartel(x, y, w, h):
     for i in range(4):
         yy = y + h - 34 + i * 9
         seg(x + 44 + i * 4, yy, x + 58 + i * 4, yy, (250, 240, 210), 2)
-    # roadblock stripes, lower right
-    bx, by = x + w - 46, y + h - 34
+    # roadblock stripes, seated on the road on a dark base, lower right
+    bx, by = x + w - 66, y + h - 30
+    fill_rect(bx - 4, by - 4, 48, 30, (30, 28, 26))
     for i in range(5):
-        fill_rect(bx + i * 8, by, 4, 26, RED if i % 2 == 0 else (250, 250, 250))
+        fill_rect(bx + i * 8, by, 4, 22, RED if i % 2 == 0 else (250, 250, 250))
 
 
 def scene_quake(x, y, w, h):
